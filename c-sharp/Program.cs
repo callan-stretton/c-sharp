@@ -10,7 +10,7 @@ namespace csharp
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("I will multiply a number by 5! What's your number?");
+            Console.WriteLine("I will multiply a number by 5! What's your number?"); 
             string input = Console.ReadLine();
             int x;
             if (int.TryParse(input, out x))
@@ -19,7 +19,7 @@ namespace csharp
             }
             else
             {
-                Console.WriteLine("You didn't enter number");
+                Console.WriteLine("Wow... " + input + " is not a number!");
             }
         }
     }
