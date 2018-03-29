@@ -15,7 +15,7 @@ namespace csharp
             int x;
             if (int.TryParse(input, out x))
             {
-                //do your stuff here
+                Console.WriteLine(x * 5);
             }
             else
             {
