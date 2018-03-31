@@ -20,12 +20,14 @@ namespace csharp
                 else
                 {
                     Console.Beep();
-                    Console.WriteLine("Wow... " + secondInput + " is not a number!");
+                    Console.WriteLine("Whoa there... " + secondInput + " is not a number!");
                 }
             }
             else
             {
-                Console.WriteLine();
+                Console.WriteLine("Ok, here's some handy info:");
+                Console.WriteLine("A byte's minimum and maximum values are {0} and {1} respectively.", byte.MinValue, byte.MaxValue);
+                Console.WriteLine("A float's minimum and maximum values are {0} and {1} respectively.", float.MinValue, float.MaxValue);
             }
         }
     }
