@@ -19,6 +19,7 @@ namespace csharp
             }
             else
             {
+                Console.Beep();
                 Console.WriteLine("Wow... " + input + " is not a number!");
             }
         }
