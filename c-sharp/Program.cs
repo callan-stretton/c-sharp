@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace csharp
 {
@@ -10,16 +6,28 @@ namespace csharp
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("I will multiply a number by 5! What's your number?"); 
-            string input = Console.ReadLine();
-            int x;
-            if (int.TryParse(input, out x))
+            Console.WriteLine("Would you like to multiply numbers? Y/N?");
+            string firstInput = Console.ReadLine().ToUpper();
+            if (firstInput == "Y")
             {
-                Console.WriteLine(x * 5);
+                Console.WriteLine("I will multiply a number by 5! What's your number?");
+                string secondInput = Console.ReadLine();
+                int x;
+                if (int.TryParse(secondInput, out x))
+                {
+                    Console.WriteLine(x * 5);
+                }
+                else
+                {
+                    Console.Beep();
+                    Console.WriteLine("Whoa there... " + secondInput + " is not a number!");
+                }
             }
             else
             {
-                Console.WriteLine("Wow... " + input + " is not a number!");
+                Console.WriteLine("Ok, here's some handy info:");
+                Console.WriteLine("A byte's minimum and maximum values are {0} and {1} respectively.", byte.MinValue, byte.MaxValue);
+                Console.WriteLine("A float's minimum and maximum values are {0} and {1} respectively.", float.MinValue, float.MaxValue);
             }
         }
     }
